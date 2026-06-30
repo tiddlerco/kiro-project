@@ -1,0 +1,68 @@
+# =====================================================================
+# application.yml —— 设计模式实战示例工程主配置
+# ---------------------------------------------------------------------
+# 技术栈：Spring Boot 2.7.18 + JDK 8 + MyBatis Starter 2.3.2 + H2（内存库）
+# 说明：
+#   1. H2 以内存模式启动即用，启动时自动执行 schema.sql 建表、data.sql 写入演示数据。
+#   2. MyBatis 的 SQL 全部外置于 classpath*:mapper/**/*.xml，开启下划线转驼峰列名映射。
+#   3. 仅状态、命令、享元三个模式需要持久化，其余模式为纯内存演示。
+# =====================================================================
+
+server:
+  # 内嵌 Web 容器端口；各模式演示入口 HTTP 接口统一经由此端口访问
+  port: 8080
+
+spring:
+  # 应用名称，便于日志标识与多服务场景区分
+  application:
+    name: design-patterns-showcase
+
+  # ---------------- 数据源：H2 内存库（MySQL 兼容模式）----------------
+  datasource:
+    driver-class-name: org.h2.Driver
+    # DB_CLOSE_DELAY=-1：所有连接关闭后内存库仍保留，保证应用运行期数据常驻；
+    # MODE=MySQL：使 H2 的 SQL 方言兼容 MySQL，贴近企业真实环境
+    url: jdbc:h2:mem:patterns;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    # H2 sa 用户默认空密码（演示用途）
+    password: ""
+
+  # ---------------- H2 控制台：便于演示时可视化查看内存库数据 ----------------
+  # 安全提示：H2 控制台可在浏览器直接执行任意 SQL，仅限本地演示开启，生产环境务必关闭。
+  h2:
+    console:
+      enabled: true
+      # 控制台访问路径：http://localhost:8080/h2-console（JDBC URL 填上方 datasource.url）
+      path: /h2-console
+
+  # ---------------- SQL 初始化：启动时自动建表 + 写入演示数据 ----------------
+  sql:
+    init:
+      # always：每次启动均执行初始化脚本（内存库重启即重建，契合演示场景）
+      mode: always
+      # 建表脚本与数据脚本均位于 classpath 根目录（src/main/resources）
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+      # 脚本读取编码，保证简体中文演示数据不乱码
+      encoding: UTF-8
+
+# ---------------- MyBatis：SQL 与 Java 分离，SQL 统一写在 XML ----------------
+mybatis:
+  # Mapper XML 映射文件位置：各模式 mapper 目录下的全部 XML
+  mapper-locations: classpath*:mapper/**/*.xml
+  # 实体类型别名包：仅扫描各持久化模式的「实体包」，XML 中可直接以简单类名引用其中的实体。
+  # 修改说明：原配置为顶级包 com.example.patterns，会将全部子包下的非实体类（常量类、枚举、
+  # 领域对象等）一并注册为类型别名，导致同名简单类冲突——例如 behavioral.state.OrderStatus
+  # 与 behavioral.observer.domain.OrderStatus 同名，启动时 MyBatis 抛 TypeException 致
+  # SqlSessionFactory 创建失败、应用无法启动。此处收窄为仅扫描实体所在包，既保留实体别名能力，
+  # 又彻底消除别名冲突；新增持久化模式时在此按需追加其实体包（或在 XML 中使用全限定类名）。
+  type-aliases-package: com.example.patterns.behavioral.state.entity,com.example.patterns.behavioral.command.entity
+  configuration:
+    # 开启下划线列名到驼峰属性名的自动映射（如 order_no -> orderNo）
+    map-underscore-to-camel-case: true
+
+# ---------------- 日志级别 ----------------
+logging:
+  level:
+    # 业务包输出 debug，便于在演示过程中观察各设计模式的关键执行日志
+    com.example.patterns: debug

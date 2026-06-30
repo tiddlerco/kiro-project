@@ -1,0 +1,2 @@
+# 占位文件：保持 Maven 标准资源目录 src/main/resources 存在。
+# 后续任务将在此放置 application.yml、schema.sql、data.sql 及各模式的 Mapper XML 等资源文件。

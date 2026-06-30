@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 继承 Spring Boot 官方父 POM，统一管理依赖版本与插件（锁定 2.7.18） -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>design-patterns-showcase</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>design-patterns-showcase</name>
+    <description>基于 Spring Boot 的 GoF 设计模式实战示例工程</description>
+
+    <properties>
+        <!-- 目标运行平台：Java 8（企业普遍性优先，复刻 RuoYi 风格的 2.7.x + JDK 8 组合） -->
+        <java.version>1.8</java.version>
+        <!-- 统一源码与报告编码为 UTF-8，保证简体中文注释不乱码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- ===== 显式锁定的第三方依赖版本 ===== -->
+        <!-- MyBatis Starter：官方兼容矩阵明确对应 Spring Boot 2.7 + Java 8+ -->
+        <mybatis-spring-boot.version>2.3.2</mybatis-spring-boot.version>
+        <!-- 属性测试（PBT）框架 jqwik，仅 test 作用域使用 -->
+        <jqwik.version>1.8.5</jqwik.version>
+        <!--
+            覆盖 Spring Boot 2.7.18 默认管理的 JUnit 版本（默认 5.8.2 / JUnit Platform 1.8.2）。
+            jqwik 1.8.5 依赖 JUnit Platform 1.10.x，二者必须对齐，否则运行属性测试时会出现
+            NoSuchMethodError 等运行期不兼容问题。此处统一提升至 JUnit 5.10.2（JUnit Platform 1.10.2）。
+        -->
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
+    </properties>
+
+    <dependencies>
+        <!-- Web 容器与 MVC，提供各模式的演示入口 HTTP 接口 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- AOP 支持：用于代理模式的缓存/限流切面与简化权限校验切面 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- 参数校验（Hibernate Validator）：配合 @Validated 在 Request 对象上声明式校验 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- MyBatis 集成：状态、命令、享元模式的持久化访问，SQL 统一写在 XML -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot.version}</version>
+        </dependency>
+
+        <!-- H2 嵌入式数据库（内存模式）：启动即用，运行期自动建表并初始化演示数据 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Lombok：仅用于实体/请求对象的样板代码精简（@Data 等） -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 测试基座：JUnit 5 + Mockito + Spring Test（test 作用域） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 属性测试框架 jqwik：用于验证设计文档中的正确性属性（test 作用域） -->
+        <dependency>
+            <groupId>net.jqwik</groupId>
+            <artifactId>jqwik</artifactId>
+            <version>${jqwik.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot 打包与运行插件；打包时排除 Lombok（仅编译期需要） -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  CommandHistoryMapper.xml —— 命令历史表（sys_command_history）持久化 SQL 映射（命令模式可追溯历史）
+  说明：
+    1. 命令执行时落库一条历史；撤销时取最近一条已执行（status=1）记录并标记为已撤销（status=0）。
+    2. SQL 全部写在本 XML 文件中，禁用 MyBatis-Plus Wrapper（落实编码规范 C11）。
+    3. 列名采用下划线风格，经 map-underscore-to-camel-case 自动映射为实体的驼峰属性。
+-->
+<mapper namespace="com.example.patterns.behavioral.command.mapper.CommandHistoryMapper">
+
+    <!--
+      新增命令历史：useGeneratedKeys 将自增主键回填至实体 id。
+      命令类型为非空列，必须插入；目标 id、前后快照、操作人可为空直接写入；
+      状态与创建时间未显式赋值时缺省走数据库默认值（status=1、create_time=当前时间）。
+    -->
+    <insert id="insert" parameterType="com.example.patterns.behavioral.command.entity.CommandHistoryEntity"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sys_command_history
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            command_type,
+            target_id,
+            before_snapshot,
+            after_snapshot,
+            <if test="status != null">status,</if>
+            operator,
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+            #{commandType},
+            #{targetId},
+            #{beforeSnapshot},
+            #{afterSnapshot},
+            <if test="status != null">#{status},</if>
+            #{operator},
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <!-- 查询最近一条已执行（status=1）的命令历史：按主键倒序取首条，供撤销定位 -->
+    <select id="selectLastExecuted"
+            resultType="com.example.patterns.behavioral.command.entity.CommandHistoryEntity">
+        SELECT id, command_type, target_id, before_snapshot, after_snapshot, status, operator, create_time
+        FROM sys_command_history
+        WHERE status = 1
+        ORDER BY id DESC
+        LIMIT 1
+    </select>
+
+    <!-- 标记为已撤销：状态由 1（已执行）置为 0（已撤销） -->
+    <update id="markUndone">
+        UPDATE sys_command_history SET status = 0 WHERE id = #{id}
+    </update>
+
+</mapper>

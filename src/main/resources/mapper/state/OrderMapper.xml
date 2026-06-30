@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  OrderMapper.xml —— 订单 Mapper 的 SQL 映射（状态模式 State 的持久化）
+  说明：
+    1. 遵循团队 MyBatis 规范（C11）：全部 SQL 写在本 XML 中，禁止使用 MyBatis-Plus 的 Wrapper。
+    2. namespace 指向 OrderMapper 接口全限定名，方法 id 与接口方法一一对应。
+    3. 以显式 resultMap 完成下划线列名到驼峰属性名的映射，与全局
+       map-underscore-to-camel-case 配置形成双重保障。
+-->
+<mapper namespace="com.example.patterns.behavioral.state.mapper.OrderMapper">
+
+    <!-- 订单实体结果映射：列名（下划线）→ 属性名（驼峰） -->
+    <resultMap id="OrderResultMap" type="com.example.patterns.behavioral.state.entity.OrderEntity">
+        <id     column="id"          property="id"/>
+        <result column="order_no"    property="orderNo"/>
+        <result column="amount"      property="amount"/>
+        <result column="status"      property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 按主键查询订单 -->
+    <select id="selectById" parameterType="long" resultMap="OrderResultMap">
+        SELECT id, order_no, amount, status, create_time, update_time
+        FROM biz_order
+        WHERE id = #{id}
+    </select>
+
+    <!-- 更新订单状态，并同步刷新更新时间 -->
+    <update id="updateStatus">
+        UPDATE biz_order
+        SET status = #{status},
+            update_time = CURRENT_TIMESTAMP
+        WHERE id = #{id}
+    </update>
+
+</mapper>

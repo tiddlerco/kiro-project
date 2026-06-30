@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  ProductMapper.xml —— 商品表（biz_product）持久化 SQL 映射（命令模式操作目标）
+  说明：
+    1. 提供命令模式所需的增、删、改、查；删除为逻辑删除（status=0），并提供恢复（status=1）以支撑撤销。
+    2. SQL 全部写在本 XML 文件中，禁用 MyBatis-Plus Wrapper（落实编码规范 C11）。
+    3. 列名采用下划线风格，经 map-underscore-to-camel-case 自动映射为实体的驼峰属性。
+-->
+<mapper namespace="com.example.patterns.behavioral.command.mapper.ProductMapper">
+
+    <!--
+      新增商品：useGeneratedKeys 将自增主键回填至实体 id。
+      商品名称与价格为非空列，必须插入；状态与创建时间未显式赋值时缺省走数据库默认值（status=1、create_time=当前时间）。
+    -->
+    <insert id="insert" parameterType="com.example.patterns.behavioral.command.entity.ProductEntity"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO biz_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            product_name,
+            price,
+            <if test="status != null">status,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+            #{productName},
+            #{price},
+            <if test="status != null">#{status},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <!-- 根据主键更新商品：仅更新入参中非空的字段，按 id 定位记录 -->
+    <update id="updateById" parameterType="com.example.patterns.behavioral.command.entity.ProductEntity">
+        UPDATE biz_product
+        <set>
+            <if test="productName != null">product_name = #{productName},</if>
+            <if test="price != null">price = #{price},</if>
+            <if test="status != null">status = #{status},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 逻辑删除：状态置为 0（已删除），保留数据行以便后续撤销恢复 -->
+    <update id="logicDelete">
+        UPDATE biz_product SET status = 0 WHERE id = #{id}
+    </update>
+
+    <!-- 恢复：状态置回 1（正常），用于删除命令的撤销 -->
+    <update id="restore">
+        UPDATE biz_product SET status = 1 WHERE id = #{id}
+    </update>
+
+    <!-- 根据主键查询商品 -->
+    <select id="selectById" resultType="com.example.patterns.behavioral.command.entity.ProductEntity">
+        SELECT id, product_name, price, status, create_time
+        FROM biz_product
+        WHERE id = #{id}
+    </select>
+
+</mapper>

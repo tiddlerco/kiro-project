@@ -1,0 +1,658 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 创建 Maven 工程、pom.xml 与三大类别包结构": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687688
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714855854
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782715575278
+      }
+    ],
+    "1.2 创建 Spring Boot 启动类与 application.yml": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687763
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782715588548
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717680863
+      }
+    ],
+    "1.3 编写 schema.sql 与 data.sql 完成 H2 持久化基座": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687804
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782715589501
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782716675920
+      }
+    ],
+    "2.1 实现响应码常量、统一响应与统一分页返回": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687837
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782716720721
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717682582
+      }
+    ],
+    "2.2 实现控制器基类 BaseController": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687885
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717760058
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719252467
+      }
+    ],
+    "2.3 实现统一异常体系": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687919
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782716721283
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717684059
+      }
+    ],
+    "2.4 实现全局异常处理器 GlobalExceptionHandler": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687953
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717760674
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719253801
+      }
+    ],
+    "2.5 实现简化权限校验机制（替代 Spring Security）": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714687988
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717761026
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719254095
+      }
+    ],
+    "2.6 实现演示入口注册表与启动清单打印": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688022
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782716721980
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717684077
+      }
+    ],
+    "3.1 实现单例角色与核心服务": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688054
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717761772
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719256494
+      }
+    ],
+    "3.2 实现单例 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688081
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790850877
+      }
+    ],
+    "4.1 实现支付处理器族与工厂": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688114
+      },
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717761799
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719257366
+      }
+    ],
+    "4.2 实现工厂方法 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688147
+      }
+    ],
+    "5.1 实现多云对象存储产品族与抽象工厂": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688187
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719312847
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720717473
+      }
+    ],
+    "5.2 实现抽象工厂 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688221
+      }
+    ],
+    "6.1 实现通知消息与建造者": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688252
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719313737
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720718438
+      }
+    ],
+    "6.2 实现建造者 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688289
+      }
+    ],
+    "7.1 实现营销活动模板原型与深拷贝": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688322
+      }
+    ],
+    "7.2 实现原型 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688354
+      }
+    ],
+    "8. 检查点 - 创建型模式收尾": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688387
+      }
+    ],
+    "9.1 实现报表查询接口与 AOP 缓存限流代理": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688425
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719314818
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720719432
+      }
+    ],
+    "9.2 实现代理 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688454
+      }
+    ],
+    "10.1 实现统一短信接口与多服务商适配器": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688485
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719317845
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720720470
+      }
+    ],
+    "10.2 实现适配器 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688520
+      }
+    ],
+    "11.1 实现通知发送组件与装饰器链": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688558
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720734344
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722015608
+      }
+    ],
+    "11.2 实现装饰器 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688587
+      }
+    ],
+    "12.1 实现下单外观与三子系统": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688614
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720735586
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722015635
+      }
+    ],
+    "12.2 实现外观 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688638
+      }
+    ],
+    "13.1 实现推送渠道与消息类型双维度": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688669
+      }
+    ],
+    "13.2 实现桥接 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688698
+      }
+    ],
+    "14.1 实现审批节点树": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688730
+      }
+    ],
+    "14.2 实现组合 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688753
+      }
+    ],
+    "15.1 实现风控规则实体、Mapper XML 与享元工厂": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688787
+      }
+    ],
+    "15.2 实现享元 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688822
+      }
+    ],
+    "16. 检查点 - 结构型模式收尾": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688854
+      }
+    ],
+    "17.1 实现促销策略族与上下文服务": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688887
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720736441
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722016459
+      }
+    ],
+    "17.2 实现策略 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688914
+      }
+    ],
+    "18.1 实现对账模板与多渠道实现": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688947
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782720737557
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722018520
+      }
+    ],
+    "18.2 实现模板方法 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714688974
+      }
+    ],
+    "19.1 实现订单状态事件、发布者与多监听者": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689003
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722067346
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790818429
+      }
+    ],
+    "19.2 实现观察者 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689039
+      }
+    ],
+    "20.1 实现风控规则处理器链": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689070
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722067423
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790819427
+      }
+    ],
+    "20.2 实现责任链 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689098
+      }
+    ],
+    "21.1 实现订单实体、Mapper XML 与状态机": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689130
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722067455
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790390401
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790741008
+      }
+    ],
+    "21.2 实现状态 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689164
+      }
+    ],
+    "22.1 实现商品与命令历史实体及 Mapper XML": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689202
+      },
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782722067394
+      },
+      {
+        "executionId": "c56f1193-966d-4866-b633-37068ed8d9eb",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782790820769
+      }
+    ],
+    "22.2 实现命令角色与调用者": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689231
+      }
+    ],
+    "22.3 实现命令 Demo_Controller（含删除接口）、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689264
+      }
+    ],
+    "23.1 实现自定义分页迭代器": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689304
+      }
+    ],
+    "23.2 实现迭代器 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689342
+      }
+    ],
+    "24.1 实现售后工单中介者与各同事类": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689371
+      }
+    ],
+    "24.2 实现中介者 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689404
+      }
+    ],
+    "25.1 实现草稿备忘录": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689437
+      }
+    ],
+    "25.2 实现备忘录 Demo_Controller、注册演示入口与 Pattern_Doc": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689464
+      }
+    ],
+    "26. 检查点 - 行为型模式收尾": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689497
+      }
+    ],
+    "27.5 运行完整测试套件并核对覆盖完整性": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689525
+      }
+    ],
+    "28. 最终检查点 - 全工程收尾": [
+      {
+        "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782714689554
+      }
+    ],
+    "1. 搭建 Maven 工程与项目基础骨架": [
+      {
+        "executionId": "ef9131c9-0654-4b33-b8ee-754d5c4f483c",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782717680899
+      }
+    ],
+    "2. 实现公共基础设施层": [
+      {
+        "executionId": "0babcdb3-ad6d-4bb4-b945-bfcfb25285a2",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782719254141
+      }
+    ]
+  }
+}

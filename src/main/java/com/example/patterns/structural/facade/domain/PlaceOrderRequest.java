@@ -2,6 +2,10 @@ package com.example.patterns.structural.facade.domain;
 
 import lombok.Data;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 /**
@@ -26,6 +30,7 @@ public class PlaceOrderRequest {
      *
      * <p>用于在库存子系统中定位目标商品并扣减其库存。</p>
      */
+    @NotBlank(message = "商品编码不能为空")
     private String productCode;
 
     /**
@@ -33,6 +38,7 @@ public class PlaceOrderRequest {
      *
      * <p>须为正整数，库存子系统据此扣减库存，金额计算据此与单价相乘。</p>
      */
+    @Positive(message = "购买数量必须大于 0")
     private int quantity;
 
     /**
@@ -40,6 +46,8 @@ public class PlaceOrderRequest {
      *
      * <p>采用 {@link BigDecimal} 以保证金额精度；与购买数量相乘得到订单原始金额。</p>
      */
+    @NotNull(message = "商品单价不能为空")
+    @DecimalMin(value = "0", inclusive = false, message = "商品单价必须大于 0")
     private BigDecimal unitPrice;
 
     /**
@@ -47,6 +55,7 @@ public class PlaceOrderRequest {
      *
      * <p>标识本次下单的付款人，透传至支付子系统作为付款用户。</p>
      */
+    @NotBlank(message = "下单用户不能为空")
     private String buyerId;
 
     /**
@@ -54,6 +63,7 @@ public class PlaceOrderRequest {
      *
      * <p>如 {@code "wechat"}、{@code "alipay"}、{@code "balance"}，由支付子系统据此发起支付。</p>
      */
+    @NotBlank(message = "支付渠道不能为空")
     private String payChannel;
 
     /**

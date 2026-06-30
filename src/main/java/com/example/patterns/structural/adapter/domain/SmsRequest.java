@@ -2,6 +2,8 @@ package com.example.patterns.structural.adapter.domain;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 统一短信发送请求。
  *
@@ -24,16 +26,19 @@ public class SmsRequest {
      * <p>用于选取处理本次请求的适配器，如 {@code "aliyun"}、{@code "tencent"}，
      * 须与某个适配器自身声明的 {@link com.example.patterns.structural.adapter.SmsSender#vendor()} 一致。</p>
      */
+    @NotBlank(message = "短信服务商标识不能为空")
     private String vendor;
 
     /**
      * 接收短信的手机号。
      */
+    @NotBlank(message = "接收手机号不能为空")
     private String phone;
 
     /**
      * 短信正文内容。
      */
+    @NotBlank(message = "短信内容不能为空")
     private String content;
 
     /**

@@ -313,6 +313,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714688454
+      },
+      {
+        "executionId": "49f41c6d-6505-4cdb-aa19-3644fd4d6368",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782810813930
+      },
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811711377
       }
     ],
     "10.1 实现统一短信接口与多服务商适配器": [
@@ -337,6 +347,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714688520
+      },
+      {
+        "executionId": "49f41c6d-6505-4cdb-aa19-3644fd4d6368",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782810814101
+      },
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811713499
       }
     ],
     "11.1 实现通知发送组件与装饰器链": [
@@ -395,6 +415,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714688638
+      },
+      {
+        "executionId": "49f41c6d-6505-4cdb-aa19-3644fd4d6368",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782810814990
+      },
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811931742
       }
     ],
     "13.1 实现推送渠道与消息类型双维度": [
@@ -756,6 +786,27 @@
         "executionId": "f9b95494-5334-42b4-9ab4-4cbb8ec38ae4",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782809638746
+      }
+    ],
+    "9. 结构型 - 代理 Proxy（P0）": [
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811711434
+      }
+    ],
+    "10. 结构型 - 适配器 Adapter（P0）": [
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811713543
+      }
+    ],
+    "12. 结构型 - 外观 Facade（P0）": [
+      {
+        "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782811931791
       }
     ]
   }

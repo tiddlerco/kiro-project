@@ -185,13 +185,13 @@
 
 ### 阶段四 · 结构型模式（Structural）
 
-- [ ] 9. 结构型 - 代理 Proxy（P0）
+- [x] 9. 结构型 - 代理 Proxy（P0）
   - [x] 9.1 实现报表查询接口与 AOP 缓存限流代理
     - 实现 `ReportQueryService` 接口与 `ReportQueryServiceImpl`（纯查询逻辑）
     - 实现 `CacheRateLimitAspect`（`@Aspect`，以 Spring AOP 充当代理织入缓存命中复用与限流，超阈值抛 `ServiceException`），在不修改目标代码前提下织入横切逻辑
     - _Requirements: 3.1, 10.2_
 
-  - [ ] 9.2 实现代理 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 9.2 实现代理 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/proxy/queryReport`，可重复调用观察缓存、可高频调用观察限流）
     - 注册演示入口；编写 `structural/proxy/doc/proxy.md`
     - _Requirements: 3.1, 7.1, 9.2, 11.1_
@@ -212,12 +212,12 @@
     - 用 `@SpringBootTest` 验证切面对目标方法生效、超阈值请求被拒（集成测试）
     - _Requirements: 10.2, 3.1_
 
-- [ ] 10. 结构型 - 适配器 Adapter（P0）
+- [x] 10. 结构型 - 适配器 Adapter（P0）
   - [x] 10.1 实现统一短信接口与多服务商适配器
     - 实现 `SmsSender` 目标接口；实现 `AliyunSmsClient`、`TencentSmsClient` 两个签名互不相同的 Adaptee（模拟第三方 SDK）；实现 `AliyunSmsAdapter`、`TencentSmsAdapter` 将统一接口适配至各 Adaptee
     - _Requirements: 3.2_
 
-  - [ ] 10.2 实现适配器 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 10.2 实现适配器 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/adapter/sendSms`，Request 含 vendor、phone、content）
     - 注册演示入口；编写 `structural/adapter/doc/adapter.md`
     - _Requirements: 3.2, 7.1, 9.2, 11.1_
@@ -256,12 +256,12 @@
     - _Requirements: 3.3_
     - _Properties: 8_
 
-- [ ] 12. 结构型 - 外观 Facade（P0）
+- [x] 12. 结构型 - 外观 Facade（P0）
   - [x] 12.1 实现下单外观与三子系统
     - 实现 `OrderPlacementFacade` 与 `InventoryService`、`PromotionSubSystemService`、`PaymentSubSystemService` 至少 3 个子系统，子系统以接口注入，Facade 顺序编排扣减库存→计算优惠→发起支付
     - _Requirements: 3.4_
 
-  - [ ] 12.2 实现外观 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 12.2 实现外观 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/facade/placeOrder`）
     - 注册演示入口；编写 `structural/facade/doc/facade.md`
     - _Requirements: 3.4, 7.1, 9.2, 11.1_

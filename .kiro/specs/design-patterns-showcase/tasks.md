@@ -422,17 +422,17 @@
     - _Requirements: 4.5, 4.6_
     - _Properties: 12_
 
-- [ ] 22. 行为型 - 命令 Command（P0）
+- [x] 22. 行为型 - 命令 Command（P0）
   - [x] 22.1 实现商品与命令历史实体及 Mapper XML
     - 实现 `ProductEntity`、`CommandHistoryEntity` 实体
     - 实现 `ProductMapper`（`insert`、`updateById`、`logicDelete`、`restore`、`selectById`）与 `CommandHistoryMapper`（`insert`、`selectLastExecuted`、`markUndone`）及各自 XML（SQL 全部写在 XML、禁用 Wrapper，落实 C11）
     - _Requirements: 4.7, 9.8, 9.9_
 
-  - [ ] 22.2 实现命令角色与调用者
+  - [x] 22.2 实现命令角色与调用者
     - 实现 `OperationCommand` 接口（`execute()`/`undo()`/`describe()`）、`AddProductCommand`/`UpdateProductCommand`/`DeleteProductCommand` 具体命令（保存 before/after 快照）、`ProductService` 接收者、`CommandInvoker`（`invoke` 执行并入历史、`undoLast` 撤销最近命令并恢复数据）
     - _Requirements: 4.7, 4.8_
 
-  - [ ] 22.3 实现命令 Demo_Controller（含删除接口）、注册演示入口与 Pattern_Doc
+  - [x] 22.3 实现命令 Demo_Controller（含删除接口）、注册演示入口与 Pattern_Doc
     - 实现 `POST /pattern/command/execute`、`POST /pattern/command/undo`
     - 实现删除接口 `GET /pattern/command/deleteProduct`：使用 `@GetMapping`、强制携带非空删除标识 `confirmDelete`、标注 `@RequiresPermission("pattern:product:remove")` 完成权限校验（落实 C7，需求 9.7/9.10/9.11）
     - 注册演示入口；编写 `behavioral/command/doc/command.md`

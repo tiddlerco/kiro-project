@@ -673,6 +673,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714689231
+      },
+      {
+        "executionId": "8fc2080a-5822-4773-b8fe-222a6c767833",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812807042
+      },
+      {
+        "executionId": "8fc2080a-5822-4773-b8fe-222a6c767833",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782813309657
       }
     ],
     "22.3 实现命令 Demo_Controller（含删除接口）、注册演示入口与 Pattern_Doc": [
@@ -680,6 +690,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714689264
+      },
+      {
+        "executionId": "8fc2080a-5822-4773-b8fe-222a6c767833",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782813310617
+      },
+      {
+        "executionId": "8fc2080a-5822-4773-b8fe-222a6c767833",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782813804459
       }
     ],
     "23.1 实现自定义分页迭代器": [
@@ -841,6 +861,13 @@
         "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782812531484
+      }
+    ],
+    "22. 行为型 - 命令 Command（P0）": [
+      {
+        "executionId": "8fc2080a-5822-4773-b8fe-222a6c767833",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782813804491
       }
     ]
   }

@@ -566,6 +566,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714689039
+      },
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812319296
+      },
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812530496
       }
     ],
     "20.1 实现风控规则处理器链": [
@@ -629,6 +639,16 @@
         "executionId": "b66a768e-57e1-4059-8f20-3bb6291aed69",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782714689164
+      },
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812320144
+      },
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812531457
       }
     ],
     "22.1 实现商品与命令历史实体及 Mapper XML": [
@@ -807,6 +827,20 @@
         "executionId": "a9cee9b8-d3f5-440a-b3a4-9b285b39f0c8",
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782811931791
+      }
+    ],
+    "19. 行为型 - 观察者 Observer（P0）": [
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812530549
+      }
+    ],
+    "21. 行为型 - 状态 State（P0）": [
+      {
+        "executionId": "cc6c6db7-a753-47d5-bd5f-6222591d9a6d",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1782812531484
       }
     ]
   }

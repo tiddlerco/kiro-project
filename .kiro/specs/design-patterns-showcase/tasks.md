@@ -363,12 +363,12 @@
     - 断言步骤执行顺序恒为 fetch→parse→compare→report（示例测试）
     - _Requirements: 4.2, 11.4_
 
-- [ ] 19. 行为型 - 观察者 Observer（P0）
+- [x] 19. 行为型 - 观察者 Observer（P0）
   - [x] 19.1 实现订单状态事件、发布者与多监听者
     - 实现 `OrderStatusChangedEvent` 事件、`OrderStatusEventPublisher` 发布者（基于 `ApplicationEventPublisher`），以及 `SmsNotifyListener`、`PointsRewardListener` 至少两个相互独立的 `@EventListener` 监听者，实现发布方与监听方解耦
     - _Requirements: 4.3, 10.3_
 
-  - [ ] 19.2 实现观察者 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 19.2 实现观察者 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/observer/changeOrderStatus`）
     - 注册演示入口；编写 `behavioral/observer/doc/observer.md`
     - _Requirements: 4.3, 7.1, 9.2, 11.1_
@@ -399,13 +399,13 @@
     - _Requirements: 4.4_
     - _Properties: 11_
 
-- [ ] 21. 行为型 - 状态 State（P0）
+- [x] 21. 行为型 - 状态 State（P0）
   - [x] 21.1 实现订单实体、Mapper XML 与状态机
     - 实现 `OrderEntity` 实体与 `OrderMapper` 接口及 `OrderMapper.xml`（`selectById`、`updateStatus`，SQL 写在 XML、禁用 Wrapper，落实 C11）
     - 实现 `OrderState` 接口与 `CreatedState`/`PaidState`/`ShippedState`/`CompletedState`/`CancelledState` 至少三个状态及 `OrderStateContext`（持有当前状态与订单，驱动流转，显式定义合法流转，非法流转抛 `IllegalStateTransitionException` 并保持原状态）
     - _Requirements: 4.5, 4.6, 9.8, 9.9_
 
-  - [ ] 21.2 实现状态 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 21.2 实现状态 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/order/changeStatus`，Request 含 orderId、action）
     - 注册演示入口；编写 `behavioral/state/doc/state.md`
     - _Requirements: 4.5, 7.1, 9.2, 11.1_

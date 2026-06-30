@@ -106,13 +106,13 @@
     - 断言同一入口多次获取返回同一实例（引用相等）的正常路径
     - _Requirements: 11.4_
 
-- [ ] 4. 创建型 - 工厂方法 Factory Method（P0）
+- [x] 4. 创建型 - 工厂方法 Factory Method（P0）
   - [x] 4.1 实现支付处理器族与工厂
     - 实现 `PaymentProcessor` 接口与 `WechatPaymentProcessor`、`AlipayPaymentProcessor` 至少两种渠道实现
     - 实现 `PaymentProcessorFactory`：利用 Spring 注入的 `Map<String,PaymentProcessor>` 按渠道标识返回对应实现，未知渠道抛 `ServiceException` 且不创建任何实例
     - _Requirements: 2.3, 2.4, 10.4, 10.5_
 
-  - [ ] 4.2 实现工厂方法 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 4.2 实现工厂方法 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/factory/pay`，Request 对象含 channel 并 `@Validated` 校验）
     - 注册演示入口；编写 `creational/factorymethod/doc/factorymethod.md`
     - _Requirements: 2.3, 7.1, 9.2, 11.1_
@@ -121,13 +121,13 @@
     - 断言受支持渠道返回对应处理器的正常路径，并覆盖未知渠道返回错误且不创建实例的边界路径
     - _Requirements: 11.4, 2.4_
 
-- [ ] 5. 创建型 - 抽象工厂 Abstract Factory（P0）
+- [x] 5. 创建型 - 抽象工厂 Abstract Factory（P0）
   - [x] 5.1 实现多云对象存储产品族与抽象工厂
     - 实现 `CloudStorageFactory` 接口与 `AliyunStorageFactory`、`AwsStorageFactory` 至少两个产品族工厂
     - 实现产品接口 `StorageClient`、`UrlSigner` 及各厂商 4 个具体产品实现（`AliyunStorageClient`/`AliyunUrlSigner`/`AwsStorageClient`/`AwsUrlSigner`），保证同族产品相互关联一致
     - _Requirements: 2.5, 10.1_
 
-  - [ ] 5.2 实现抽象工厂 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 5.2 实现抽象工厂 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/abstractfactory/upload`，Request 含 vendor、key）
     - 注册演示入口；编写 `creational/abstractfactory/doc/abstractfactory.md`
     - _Requirements: 2.5, 7.1, 9.2, 11.1_
@@ -136,12 +136,12 @@
     - 为每个云厂商工厂各一例，断言其创建的产品族归属同一 vendor、相互配套（示例测试，非属性测试）
     - _Requirements: 2.5, 11.4_
 
-- [ ] 6. 创建型 - 建造者 Builder（P0）
+- [x] 6. 创建型 - 建造者 Builder（P0）
   - [x] 6.1 实现通知消息与建造者
     - 实现 `NotificationMessage`（含静态 `builder()`，必选「接收人」+ 可选「标题/正文/附件/优先级」）与 `NotificationMessageBuilder`（链式分步设置，`build()` 校验必选部件，缺失则抛 `ServiceException`）
     - _Requirements: 2.6_
 
-  - [ ] 6.2 实现建造者 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 6.2 实现建造者 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/builder/buildNotification`）
     - 注册演示入口；编写 `creational/builder/doc/builder.md`
     - _Requirements: 2.6, 7.1, 9.2, 11.1_

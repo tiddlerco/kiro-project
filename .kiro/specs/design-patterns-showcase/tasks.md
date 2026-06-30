@@ -234,12 +234,12 @@
     - _Requirements: 3.2_
     - _Properties: 7_
 
-- [ ] 11. 结构型 - 装饰器 Decorator（P0）
+- [x] 11. 结构型 - 装饰器 Decorator（P0）
   - [x] 11.1 实现通知发送组件与装饰器链
     - 实现 `NotifySender` 组件接口、`BaseNotifySender` 具体组件、`NotifyDecorator` 抽象装饰器（持有 `NotifySender`，体现组合优于继承）、`SignatureDecorator`/`EncryptDecorator`/`LogDecorator` 至少 2 个可任意叠加的具体装饰
     - _Requirements: 3.3, 8.3_
 
-  - [ ] 11.2 实现装饰器 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 11.2 实现装饰器 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/decorator/send`，Request 指定要叠加的能力列表）
     - 注册演示入口；编写 `structural/decorator/doc/decorator.md`
     - _Requirements: 3.3, 7.1, 9.2, 11.1_
@@ -326,13 +326,13 @@
 
 ### 阶段五 · 行为型模式（Behavioral）
 
-- [ ] 17. 行为型 - 策略 Strategy（P0）
+- [x] 17. 行为型 - 策略 Strategy（P0）
   - [x] 17.1 实现促销策略族与上下文服务
     - 实现 `PromotionStrategy` 接口与 `FullReductionStrategy`（满减）、`DiscountStrategy`（折扣）、`DirectReductionStrategy`（立减）三种可相互替换策略
     - 实现 `PromotionCalculateService` 上下文：注入 `Map<String,PromotionStrategy>`，按类型标识选策略，不修改调用方代码即可替换
     - _Requirements: 4.1, 10.4_
 
-  - [ ] 17.2 实现策略 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 17.2 实现策略 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/strategy/calculate`）
     - 注册演示入口；编写 `behavioral/strategy/doc/strategy.md`
     - _Requirements: 4.1, 7.1, 9.2, 11.1_
@@ -349,12 +349,12 @@
     - _Requirements: 4.1_
     - _Properties: 10_
 
-- [ ] 18. 行为型 - 模板方法 Template Method（P0）
+- [x] 18. 行为型 - 模板方法 Template Method（P0）
   - [x] 18.1 实现对账模板与多渠道实现
     - 实现 `AbstractReconcileTemplate`（`final reconcile()` 固定骨架：拉取→解析→比对→生成差异报告，其中 `fetch()`/`parse()` 为子类重写的抽象步骤）与 `AlipayReconcileTemplate`、`WechatReconcileTemplate`
     - _Requirements: 4.2_
 
-  - [ ] 18.2 实现模板方法 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 18.2 实现模板方法 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/template/reconcile`，Request 含 channel）
     - 注册演示入口；编写 `behavioral/templatemethod/doc/templatemethod.md`
     - _Requirements: 4.2, 7.1, 9.2, 11.1_
@@ -377,12 +377,12 @@
     - 用 `@SpringBootTest` 验证同一订单状态变更事件发布后各监听者均被回调（集成测试）
     - _Requirements: 4.3, 10.3, 11.4_
 
-- [ ] 20. 行为型 - 责任链 Chain of Responsibility（P0）
+- [x] 20. 行为型 - 责任链 Chain of Responsibility（P0）
   - [x] 20.1 实现风控规则处理器链
     - 实现 `RiskRuleHandler` 接口（`handle(RiskContext)`、`order()`）与 `AmountLimitHandler`、`BlacklistHandler`、`FrequencyHandler` 至少两个按序节点，以及 `RiskRuleChain`（注入 `List<RiskRuleHandler>` 按 order 排序组链、驱动依次传递直至被拦截或通过全部节点）
     - _Requirements: 4.4_
 
-  - [ ] 20.2 实现责任链 Demo_Controller、注册演示入口与 Pattern_Doc
+  - [x] 20.2 实现责任链 Demo_Controller、注册演示入口与 Pattern_Doc
     - 实现 Demo_Controller（`POST /pattern/chain/riskCheck`）
     - 注册演示入口；编写 `behavioral/chain/doc/chain.md`
     - _Requirements: 4.4, 7.1, 9.2, 11.1_

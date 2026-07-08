@@ -883,6 +883,48 @@
         "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
         "timestamp": 1782814559044
       }
+    ],
+    "10.3 编写适配器核心行为单元测试": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408379414
+      }
+    ],
+    "10.4 编写属性测试 Property 7（适配器统一接口委派）": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408379522
+      }
+    ],
+    "17.3 编写策略核心行为单元测试": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408380098
+      }
+    ],
+    "17.4 编写属性测试 Property 10（策略计算不变式）": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408381866
+      }
+    ],
+    "20.3 编写责任链核心行为单元测试": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408382714
+      }
+    ],
+    "20.4 编写属性测试 Property 11（责任链传递与短路）": [
+      {
+        "executionId": "7bf1681d-388e-46c1-8006-a055572f32fe",
+        "chatSessionId": "sess_9b029bbd-b0f5-468b-95c1-90e676b083eb",
+        "timestamp": 1783408383629
+      }
     ]
   }
 }
